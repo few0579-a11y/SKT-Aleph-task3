@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 32px;
+    background-color: #f3f4f6;
+    color: #222;
+    font-family: Arial, "Malgun Gothic", sans-serif;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+h1,
+main>p {
+    grid-column: 1 / -1;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+main>p {
+    margin-top: 0;
+    color: #666;
+}
+
+section {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+/* 이미지 편집: 왼쪽 */
+main>section:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+/* 문구 편집: 왼쪽 */
+main>section:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+/* 미리보기: 오른쪽 */
+main>section:nth-of-type(3) {
+    grid-column: 2;
+    grid-row: 3 / 5;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    margin: 16px 0 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="file"],
+textarea,
+input[type="range"] {
+    width: 100%;
+}
+
+textarea {
+    min-height: 90px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+input[type="range"] {
+    cursor: pointer;
+}
+
+input[type="color"] {
+    width: 60px;
+    height: 36px;
+    cursor: pointer;
+}
+
+#fileMessage {
+    font-size: 13px;
+    color: #b42318;
+}
+
+#previewCanvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #e5e7eb;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 16px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    h1,
+    main>p,
+    main>section:nth-of-type(1),
+    main>section:nth-of-type(2),
+    main>section:nth-of-type(3) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+
+#aspectRatio {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+}
+
+#imageFit {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+}
+
+#imageScale {
+    width: 100%;
+}
+
+#previewCanvas {
+    cursor: grab;
+    touch-action: none;
+}
+
+#previewCanvas:active {
+    cursor: grabbing;
+}
+
+#downloadBtn {
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    background: #374151;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#downloadBtn:hover {
+    background: #1f2937;
+}
+
+#backgroundMode {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+}
+
+
+/* 카드 4 — 템플릿 관리 영역 */
+#templateSection {
+    grid-column: 1 / -1;
+    grid-row: 5;
+}
+
+#templateName,
+#templateSelect {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+}
+
+#templateSection button {
+    padding: 10px 16px;
+    margin: 6px 6px 6px 0;
+    border: none;
+    border-radius: 8px;
+    background: #374151;
+    color: white;
+    cursor: pointer;
+}
+
+#templateSection button:hover {
+    background: #1f2937;
+}
+
+#templateSection #deleteTemplateBtn {
+    background: #b42318;
+}
+
+#templateSection #deleteTemplateBtn:hover {
+    background: #912018;
+}
+
+#templateMessage {
+    min-height: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    #templateSection {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+
+/* 카드 5 — JSON 백업 및 복원 */
+
+#backupSection {
+    grid-column: 1 / -1;
+    grid-row: auto;
+}
+
+#backupSection label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#importJsonInput {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#backupSection button {
+    padding: 10px 16px;
+    margin: 6px 6px 6px 0;
+    border: none;
+    border-radius: 8px;
+    background: #374151;
+    color: white;
+    cursor: pointer;
+}
+
+#backupSection button:hover {
+    background: #1f2937;
+}
+
+#backupMessage {
+    min-height: 20px;
+    margin-top: 12px;
+    font-size: 14px;
+}
