@@ -1,0 +1,11 @@
+
+{
+  "version": 1,
+  "templates": [
+    {
+      "id": "missing-fields-001",
+      "name": "필수 항목 누락 테스트",
+      "text": "이 문구만 저장됨"
+    }
+  ]
+}
