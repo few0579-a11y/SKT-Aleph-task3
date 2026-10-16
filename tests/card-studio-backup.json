@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "exportedAt": "2026-10-16T07:37:51.815Z",
+  "templates": [
+    {
+      "id": "3d3a8006-86f9-43f1-8a0f-88780f35eebe",
+      "name": "테스트 카드 01 수정본",
+      "text": "수정된 첫 번째 카드",
+      "textSize": 36,
+      "textColor": "#ffffff",
+      "textX": 50,
+      "textY": 50,
+      "aspectRatio": "1:1",
+      "backgroundMode": "color",
+      "backgroundColor": "#feb3ff",
+      "imageFit": "contain",
+      "imageScale": 100,
+      "imageOffsetX": 0,
+      "imageOffsetY": 0
+    },
+    {
+      "id": "441d4e20-99c6-4443-89af-41554993bf3c",
+      "name": "통합 테스트 A",
+      "text": "문구 A",
+      "textSize": 36,
+      "textColor": "#ffffff",
+      "textX": 50,
+      "textY": 50,
+      "aspectRatio": "1:1",
+      "backgroundMode": "color",
+      "backgroundColor": "#ff80bd",
+      "imageFit": "contain",
+      "imageScale": 100,
+      "imageOffsetX": 0,
+      "imageOffsetY": 0
+    },
+    {
+      "id": "7c7ac8f2-5c14-429e-8c2a-e47a2a7cba14",
+      "name": "통합 테스트 B",
+      "text": "수정된 문구 B",
+      "textSize": 36,
+      "textColor": "#ffffff",
+      "textX": 50,
+      "textY": 50,
+      "aspectRatio": "1:1",
+      "backgroundMode": "color",
+      "backgroundColor": "#80bdff",
+      "imageFit": "contain",
+      "imageScale": 150,
+      "imageOffsetX": 0,
+      "imageOffsetY": 0
+    }
+  ]
+}
